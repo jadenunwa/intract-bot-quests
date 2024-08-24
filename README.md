@@ -5,7 +5,7 @@
 
 ```bash
 function clickTasksAndVerify() {
-    const taskElements = document.querySelectorAll('._tasks_container_1ftdw_1');
+    const taskElements = document.querySelectorAll('._one_time_task_container_baselink_1ejbz_1');
 
     if (taskElements.length === 0) {
         console.log('No task elements found.');
@@ -24,7 +24,7 @@ function clickTasksAndVerify() {
     console.log(`Clicked on ${taskElements.length} task element(s) in total.`);
 
     setTimeout(() => {
-        const verifyButtons = document.querySelectorAll('button[data-verify-button-status="idle"]._container_byz4l_1');
+        const verifyButtons = document.querySelectorAll('button[data-verify-button-status="idle"]._container_d8fl8_1');
 
         if (verifyButtons.length === 0) {
             console.log('No verify buttons found.');
@@ -33,10 +33,10 @@ function clickTasksAndVerify() {
 
         verifyButtons.forEach((verifyButton, index) => {
             verifyButton.click();
-            console.log(`Clicked on verify button ${index + 1}`);
+            console.log(`Clicked on verify ${index + 1}`);
         });
 
-        console.log(`Clicked on ${verifyButtons.length} verify button(s) in total.`);
+        console.log(`Clicked on ${verifyButtons.length} verify (s) in total.`);
     }, 8000);
 }
 
